@@ -1,0 +1,19 @@
+.chair {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+.chair:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.3s;
+}
+.chair.booked {
+  background-color: green;
+  color: azure;
+}
+.chair.booking {
+  background-color: rgb(20, 32, 85);
+  border-color: rgb(20, 32, 85);
+  color: #fff;
+}
