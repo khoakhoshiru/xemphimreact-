@@ -198,8 +198,8 @@ export const chairReducer = (state = initialState, action) => {
       const data = state.chairList.map(item => {
         const dsghe = item.danhSachGhe.map(ghe => {
           state.chairSelectedList.forEach(ele => {
-            if (e.soGhe === ele.soGhe) {
-              e.daDat = true;
+            if (ele.soGhe === ele.soGhe) {
+              ele.daDat = true;
             }
           });
           return ghe;

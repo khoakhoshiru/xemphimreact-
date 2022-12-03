@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import React, { Component } from "react";
+import clsx from "clsx";
 
 class Results extends Component {
   render() {
@@ -37,9 +38,7 @@ class Results extends Component {
             vnd
           </div>
         </div>
-        <button className="btn btn-primary" onClick={handle()}>
-          thanh toán
-        </button>
+        <button className="btn btn-primary">thanh toán</button>
       </div>
     );
   }
@@ -54,7 +53,12 @@ const mapStatetoProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    dispatch()
+    handle: chair => {
+      dispatch({
+        type: "PAY",
+        payload: chair,
+      });
+    },
   };
 };
-export default connect(mapStatetoProps)(Results);
+export default connect(mapStatetoProps, mapDispatchToProps)(Results);
